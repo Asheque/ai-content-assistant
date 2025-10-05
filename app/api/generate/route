@@ -1,0 +1,17 @@
+import { NextResponse } from "next/server";
+export async function POST(req: Request) {
+  console.log("OPENAI Key length:", process.env.OPENAI_API_KEY?.length);
+
+  const { prompt } = await req.json();
+  const text = `AI generated content for: "${prompt}"`;
+  return NextResponse.json({ text });
+}
+
+export async function POST(req: Request) {
+  const { prompt } = await req.json();
+
+  // Temporary placeholder response
+  const text = `AI generated content for: "${prompt}"`;
+
+  return NextResponse.json({ text });
+}
